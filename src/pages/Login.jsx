@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <div className='w-screen h-screen bg-blue-300 flex justify-center items-center '>
         {/* form container */}
-        <form onSubmit={handleSubmit} className='bg-white text-black flex flex-col w-[30%] px-8 py-4'>
+        <form onSubmit={handleSubmit} className='bg-white text-black flex flex-col sm:w-[90%] rounded-lg w-[30%] px-8 py-4'>
             <p className='text-center text-3xl font-semibold'>Lama Chat</p>
             <p className='text-center'>Login</p>
             <input type="text" placeholder='Email' className='bg-white border-b border-gray-400 px-2 py-1 mb-3'/>

@@ -8,7 +8,7 @@ const Home = () => {
 
   const context = useContext(AuthContext);
   const navigate = useNavigate();
-  console.log(context);
+  // console.log(context);
 
   try {
     context.currentUser ? console.log("hiii") : navigate("/login");
@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div className='w-screen h-screen bg-[#a7bcff] flex justify-center items-center'>
         {/* container */}
-        <div className='w-[65%] h-[80%] rounded-lg flex overflow-hidden'>
+        <div className='w-[65%] h-[80%] sm:w-[90%] sm:h-[90%] rounded-lg flex overflow-hidden'>
             <Sidebar />
             <Chat />
         </div>
