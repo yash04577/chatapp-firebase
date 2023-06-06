@@ -13,6 +13,7 @@ const Search = () => {
     const {currentUser} = context;
 
     const handleSearch = async () => {
+
         try {
 
             const q = query(collection(db, "users"), where("displayName", "==", username))
@@ -76,8 +77,9 @@ const Search = () => {
 
 
         <div className='px-2'>
-            <div>
+            <div className='flex relative'>
                 <input onChange={e => setUsername(e.target.value)} value={username} onKeyDown={handleKey} type="text" placeholder='find a user' className='w-full bg-transparent outline-none px-2 border-b border-gray-400 capitalize mt-2 mb-1' />
+                <button className='hidden sm:flex h-[70%] bg-transparent absolute right-0 bottom-[15px] font-light focus:outline-none' onClick={handleSearch}>Seach</button>
             </div>
 
             {/* searched User */}

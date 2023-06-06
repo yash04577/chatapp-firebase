@@ -5,10 +5,6 @@ const Message = ({data}) => {
 
   const context = useContext(Context);
 
-  {
-    console.log(data)
-  }
-
   return (
     <div className={`text-black flex my-3 gap-3 ${context.currentUser.uid == data.senderId ? 'justify-end ' : 'justify-start'} `}>
         {/* information div */}
